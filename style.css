@@ -1,0 +1,568 @@
+*,
+body,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato', 'Helvetica Neue', sans-serif;
+    background: rgba(207, 207,207,0.5);
+    color: rgb(19, 18, 18);
+    text-align: center;
+    overflow-x: hidden;
+}
+
+nav#navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background: #fff;
+    width: 100%;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+.logo {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 20px;
+    letter-spacing: 4px;
+    margin-left: 20px;
+}
+
+.nav-link {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-link a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.6px;
+    font-size: 17px;
+}
+
+.nav-link li {
+    list-style: none;
+    color: aliceblue;
+}
+.mobile-nav-toggle {
+    display: none;
+}
+
+
+@supports (backdrop-filter: blur(1rem)) {
+    .nav-link {
+        background: hsla(0, 0%, 100%, 0.1);
+        backdrop-filter: blur(1rem);
+    }
+}
+
+h1{
+    font-size: 1rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 0.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h3{
+    padding: 0.5rem;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+p{
+    line-height: 1.1;
+    word-spacing: 0.2rem;
+    padding: 10px;
+    color:rgb(8, 8, 8);
+    font-family: 'Lato', sans-serif;
+}
+#big-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3px;
+}
+
+#profile-img{
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    z-index: -1;
+}
+figure{
+    margin: 0 auto;
+}
+#sidebar{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 3.7rem;
+    text-align: justify;
+    background: #ffff;
+    max-width: 340px;
+    margin: 0 0 2px 0;
+    border-radius: 3px;
+}
+.contact-link{
+    width: 1.7rem;
+    height: 1.7rem;
+    margin: 1rem;
+}
+#contact-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+hr{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-color: rgb(171, 171, 171);
+}
+#bio-data{
+    margin: 1rem ;
+}
+
+.bio-data{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+}
+#bio-data li{
+    color: #333;
+    list-style: none;
+}
+
+.list{
+    line-height: 20px;
+}
+.fa{
+    width:1.3rem;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    line-height: 20px;
+    margin-left: auto;
+}
+.centre{
+    text-align: center;
+}
+.profile-container{
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 3.5px;
+
+}
+#profile{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding:  1rem;
+    text-align: left;
+    background: #fff;
+    border-radius: 3px;
+}
+.date
+{
+    padding-left: 2.5rem;
+}
+.edu-desc{
+    font-weight: 900;
+    padding-left: 1rem;
+    list-style: none;
+}
+ol a{
+    padding-left: 5px;
+}
+
+#aboutme {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 1rem;
+    height: 100%;
+    line-height: 1;
+    text-align: justify;
+    background: #fff;
+    border-radius: 3px;
+}
+.p-links{
+    line-height: 1.5em;
+}
+.p-links li, a{
+    list-style: none;
+    text-decoration: none;
+}
+
+#hobby-section{
+    background: #fff;
+    text-align: justify;
+    padding: 1rem;
+    border-radius: 3px;
+}
+#hobby-section ol li{
+    list-style-type: none;
+    margin-bottom: 10px;
+    padding-left: 20px
+}
+#skill-menu{
+    background: #fff;
+    padding: 1rem;
+    margin: 0 0 2px 0;
+    border-radius: 3px;
+}
+#skill-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.progress-bar{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.progress{
+    background: #b8b8b869;
+    border-radius: 5px;
+    text-align: left;
+    padding: 1rem;
+    margin: 10px 0;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0 , 0.3);
+}
+.progress > p{
+    font-weight: 700;
+}
+#javaScript, #html, #css{
+    color: red;
+    font-size: 0.7rem;
+    transition: all 5s ease;
+    animation-name: move;
+}
+
+.skill{
+    text-align: right;
+    padding: 10px 0;
+    color: #fff;
+    border-radius: 5px;
+}
+.js-percent{
+    width: 45%;
+    background: #fad400;
+    text-align: center;
+}
+.html-percent {
+    width: 90%;
+    background: rgb(255, 132, 32);
+    text-align: center;
+}
+.css-percent {
+    width: 85%;
+    background: rgb(78, 161, 238);
+    text-align: center;
+}
+.skill-icon{
+    width:8rem;
+}
+.skill-bd{
+    border-radius: 5px;
+}
+#bg-header{
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px 0;
+    color: #fff;
+    background: rgba(131, 76, 76, 0.595);
+    cursor: pointer;
+    border: none;
+}
+
+footer{
+    background: #fff;
+}
+@media screen and (max-width: 767px) {
+    body{
+    background: #fff;
+    }
+    #brand-name{
+    font-size: 1.4rem;
+    }
+    .nav-link {
+        position: fixed;
+        inset: 0 0 0 20%;
+        gap: 2.3em;
+        background: hsla(0, 0%, 0%, 0.562);
+        backdrop-filter: blur(1rem);
+        flex-direction: column;
+        padding: min(30vh, 10rem) 2em;
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        position: fixed;
+        background: #fff;
+        width: 2rem;
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Hamburger_icon.svg/120px-Hamburger_icon.svg.png?20160819113547);
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        justify-content:center;
+        align-items:center;
+        border: none;
+        aspect-ratio: 1;
+        top: 0.5rem;
+        right: 2rem;
+        z-index: 1000;
+        cursor: pointer;
+    }
+    .mobile-nav-toggle[aria-expanded="true"]{
+        background-image: url(https://img.icons8.com/ios-glyphs/2x/delete-sign.png);
+        background-size: 2rem;
+        background-repeat: no-repeat;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-link[data-visible=true] {
+        transform: translateX(0%)
+    }
+    .nav-link a{
+        color: #fff;
+        font-size: 1.2rem;
+    }
+    div#sidebar{
+    width: 100%;
+    }
+    h3,h4,h2{
+    text-align: center;
+    font-weight: 900;
+    }
+    hr{
+    display: none;
+    }
+    #profile-img{
+    width: 7rem;
+    height: 7rem;
+    }
+    #contact-box {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    }
+    .hob-list{
+    text-align: left;
+    margin-left: 20px;
+    }
+    figure{
+    margin: 0 auto;
+    }
+    .edu-desc{
+    padding: 10px 0;
+    }
+    .list{
+        padding: 0;
+    }
+    #pDesc{
+    margin:0 50px;
+    }
+    .date li{
+        list-style-type: disc;
+        padding-bottom: 10px;
+    }
+    .bio-data{
+        margin: 0;
+        padding:0;
+        text-align: left;
+    }
+    .fa{
+        margin-right: 10px;
+    }
+    #big-container{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
+@media screen and (min-width: 1024px) {
+    #primary-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width:500px;
+    }
+    li.colbg{
+        padding: 18px;
+    }
+    .colbg:hover{
+        border-bottom: 2px solid rgb(44, 44, 196);
+    }
+    .active{
+        border-bottom: 2px solid rgb(44, 44, 196);
+        font-weight: bold;
+    }
+    .nav-con:hover{
+        text-decoration: none;
+    }
+    #sidebar{
+        max-width: 350px;
+        padding-top: 5rem;
+    }
+    .profile-container{
+        padding-top: 2.5rem;
+    }
+    .icon{
+        margin: 5px 10px;
+    }
+    h1{
+        font-size: 1.5rem;
+    }
+    h2,h3{
+        text-align: justify;
+    }
+    p .hob-list{
+        word-spacing: 0.5rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+    .date li {
+        list-style-type: disc;
+        padding-bottom: 10px;
+    }
+    .edu-desc {
+    padding: 10px 0;
+    }
+    li{
+        font-size: 1rem;
+    }
+    
+    #pDesc{
+        word-break: normal;
+    }
+    .contact-link{
+        padding-top: 6px;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    hr{
+        border: 1px solid  rgb(194, 191, 191);
+    }
+    p, .list{
+        line-height: 1.5;
+    }
+    
+}
+@media screen and (min-width: 768px) and (max-width:1023px){
+    body{
+        background: #fff;
+    }
+    #primary-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 500px;
+    }
+    
+    li.colbg {
+        padding: 18px;
+    }
+    .active {
+        border-bottom: 2px solid rgb(44, 44, 196);
+        font-weight: bold;
+    }
+    .colbg:hover {
+        border-bottom: 2px solid rgb(44, 44, 196);
+    }
+    
+    .nav-con:hover {
+        text-decoration: none;
+    }
+    #big-container{
+        display: grid;
+        grid-template-columns: auto;
+        padding-top: 2rem;
+    }
+    #profile{
+        display:flex;
+        text-align: justify;
+    }
+    #sidebar{
+        width: 100vw;
+        text-align: justify;
+    }
+    h1{
+        font-size: 1.4rem;
+        padding-top: 20px;
+    }
+    h2,h3{
+        text-align: center;
+    }
+    p,
+    .list {
+    line-height: 1.5;
+    }
+    hr{
+        display: none;
+    }
+    p .hob-list {
+    word-spacing: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    }
+    .date li {
+    list-style-type: disc;
+    padding-bottom: 10px;
+    }
+    .edu-desc {
+    padding: 10px 0;
+    margin: 0 90px;
+    }
+    .date{
+        margin: 0 100px;
+    }
+    #aboutme{
+        margin: 0 50px
+        
+    }
+    #pDesc{
+        margin: 0 50px
+    }
+    li {
+    font-size: 1rem;
+    }
+    #contact-box{
+        display: flex;
+        flex-direction:column;
+        width: 100vw;
+    }
+    #hobby-section{
+        text-align: center;
+    }
+    .list{
+        text-align: left;
+        margin: 0 90px;
+    }
+    .contact-link{
+        width: 4rem;
+        height: 4rem;
+    }
+}
